@@ -19,7 +19,7 @@ const options = {
     },
     data_directory: {
         desc: 'Absolute path to store all piston related data at',
-        default: process.env['PISTON_DATA_DIRECTORY'] || './data',
+        default: process.env['PISTON_DATA_DIRECTORY'] || '/tmp/data',
         validators: [
             x => fss.existsSync(x) || `Directory ${x} does not exist`,
         ],

@@ -8,6 +8,7 @@ RUN npm install --prefix api
 
 # Create writable isolate directory
 RUN mkdir -p /tmp/isolate
+RUN mkdir -p /tmp/data
 
 # Set environment variables
 ENV PISTON_DATA_DIRECTORY=./data
