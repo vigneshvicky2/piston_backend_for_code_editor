@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: piston-api
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    buildCommand: "./piston start"
+    startCommand: "node api/index.js"
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 10000
